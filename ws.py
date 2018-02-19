@@ -18,7 +18,8 @@ while ( 1 ) :
 	marker = "	*** new transaction ***"
 	if 'out' in result['x'] :
 		for out in result['x']['out'] :
-			print out['addr'] + ' got ' + str( Decimal( out['value'] ) / Decimal(100000000.0)) +marker
+			if type(out['addr']) == str:
+				print out['addr'] + ' got ' + str( Decimal( out['value'] ) / Decimal(100000000.0)) +marker
 			marker = ''
 		
 print "Done"
