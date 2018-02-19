@@ -23,8 +23,6 @@ while ( 1 ) :
 			a = int( Decimal( result['x']['time'] ))
 			b = datetime.fromtimestamp( a )
 			c = format( Decimal( out['value'] ) / Decimal(100000000.0))
-#			print out['addr'] + ' got ' + c +marker
-#			if type(c) == str:
 			if type(out['addr']) == str:
 			    print str( b ) + ' ' + out['addr'] + ' got ' + c + marker
 			marker = ''
